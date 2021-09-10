@@ -15,6 +15,6 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: dreitier/php-8-laravel
-        username: ${{ secrets.DOKCER_HUB_USERNAME }}
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_TOKEN }}
         snapshot: false
