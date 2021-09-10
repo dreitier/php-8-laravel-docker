@@ -1,0 +1,20 @@
+name: Build image and deploy to Docker Hub
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Publish to Registry
+      id: publish_to_registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: dreitier/php-8-laravel
+        username: ${{ secrets.DOKCER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_TOKEN }}
+        snapshot: false
