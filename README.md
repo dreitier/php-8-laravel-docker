@@ -1,6 +1,6 @@
 # php-8-laravel Docker image
 
-This Docker image can be used as a base for Laravel applications based upon PHP 8.0.
+This Docker image can be used as a starting point for Laravel applications based upon PHP 8.0.
 
 In you own `Dockerfile`, you might want to use the following:
 

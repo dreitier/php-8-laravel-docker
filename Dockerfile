@@ -21,6 +21,6 @@ RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled
 WORKDIR /var/www/app
 RUN php -m
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
-    &&  php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" \
+    &&  php -r "if (hash_file('sha384', 'composer-setup.php') === '77b8aca1b41174a67f27be066558f8a96f489916f4cded2bead3cab6a3f33590') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" \
     &&  php composer-setup.php --install-dir=/usr/local/bin \
     &&  php -r "unlink('composer-setup.php');"
