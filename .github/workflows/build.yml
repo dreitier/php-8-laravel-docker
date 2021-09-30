@@ -17,4 +17,4 @@ jobs:
         name: dreitier/php-8-laravel
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_TOKEN }}
-        snapshot: false
+        snapshot: true
