@@ -18,4 +18,4 @@ In you own `Dockerfile`, you might want to use the following:
 	
 	git tag php-X.Y-laravel-X.Y
 	git push origin main
-	git push origin tag
+	git push origin --tags
