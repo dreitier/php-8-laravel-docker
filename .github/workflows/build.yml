@@ -3,6 +3,8 @@ name: Build image and deploy to Docker Hub
 on:
   push:
     branches: [ main ]
+    tags:
+      - *
 
 jobs:
   deploy:
