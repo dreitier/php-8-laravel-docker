@@ -1,7 +1,7 @@
-FROM php:8.0.9-apache
+FROM php:8.1-apache
 
 LABEL org.opencontainers.image.authors="ckl@dreitier.com"
-LABEL description="Starter image for Laravel-based application using PHP 8.0"
+LABEL description="Starter image for Laravel-based application using PHP 8.1"
 
 RUN apt-get update -y \
     && apt-get install -y libwebp-dev libjpeg62-turbo-dev libpng-dev libxpm-dev libfreetype6-dev zlib1g-dev libonig-dev libzip-dev npm
@@ -11,6 +11,7 @@ RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install zip
 RUN docker-php-ext-configure gd
 RUN docker-php-ext-install gd
+RUN docker-php-ext-install exif
 
 RUN apt-get remove -y libwebp-dev libjpeg62-turbo-dev libpng-dev libxpm-dev libfreetype6-dev zlib1g-dev libonig-dev libzip-dev \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/
