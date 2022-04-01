@@ -14,7 +14,8 @@ jobs:
       id: publish_to_registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: dreitier/php-8-laravel
+        name: dreitier/php-laravel
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_TOKEN }}
         snapshot: false
+        tag_names: true

@@ -1,10 +1,10 @@
-# php-8-laravel Docker image
+# php-laravel Docker image
 
-This Docker image can be used as a starting point for Laravel applications based upon PHP 8.0.
+This Docker image can be used as a starting point for Laravel applications based upon PHP >=8.0.
 
 In you own `Dockerfile`, you might want to use the following:
 
-	FROM dreitier/php-8-laravel:latest
+	FROM dreitier/php-laravel:latest
 	WORKDIR /var/www/app
 	COPY . ./
 	RUN php /usr/local/bin/composer.phar install
