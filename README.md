@@ -13,3 +13,9 @@ In you own `Dockerfile`, you might want to use the following:
 	RUN chmod -R uag+w /var/www/app/storage
 	RUN rm -rf /var/www/html \
 		&&  ln -s /var/www/app/public/ /var/www/html
+
+## Create new release
+	
+	git tag php-X.Y-laravel-X.Y
+	git push origin main
+	git push origin tag

@@ -17,5 +17,5 @@ jobs:
         name: dreitier/php-laravel
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_TOKEN }}
-        snapshot: false
         tag_names: true
+        snapshot: true
